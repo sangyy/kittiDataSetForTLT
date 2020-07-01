@@ -7,12 +7,12 @@ count = 0
 for filename in files:
     portion = os.path.splitext(filename)#将文件名拆成名字和后缀
     txtfilename = portion[0]+".txt"
-    if portion[1] != ".JPEG":
+    if portion[1] != ".jpg":
     	print(portion[0])
     if not os.path.exists(os.path.join(labels,txtfilename)):
     	print(os.path.join(labels,txtfilename))
     	count = count +1
-print(count)
+print(count,"lack of label")
     #if portion[1] == ".jpg":#关于后缀
     #    newname = portion[0] + ".JPEG"
     #    os.rename(os.path.join(path, filename), os.path.join(path, newname))
